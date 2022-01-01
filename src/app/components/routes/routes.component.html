@@ -1,0 +1,39 @@
+<div class="divroutes">
+  <!--  <div>-->
+  <!--    <p [innerHTML]="introText">{{introText | uppercase}}</p>-->
+  <!--  </div>-->
+
+  <!--  <div>-->
+  <!--    <h2>{{route.name}} Routes Informations<br></h2>-->
+  <!--  </div>-->
+  <!--single route-->
+  <!--  <div><span>name: </span>{{route.name}}</div>-->
+  <!--  <div><span>direction: </span>{{route.direction}}</div>-->
+  <!--  <div><span>type: </span>{{route.type}}</div>-->
+
+  <!--  <div>-->
+  <!--    <h2>{{addRouteTitle}}</h2>-->
+  <!--    <div>-->
+  <!--      <label for="name">Route name: </label><input id="name" [(ngModel)]="route.name" placeholder="name">-->
+  <!--      <label for="direction">Route direction: </label><input id="direction" [(ngModel)]="route.direction"-->
+  <!--                                                             placeholder="direction">-->
+  <!--      <label for="type">Route type's: </label><input id="type" [(ngModel)]="route.type" placeholder="type">-->
+  <!--    </div>-->
+  <!--  </div>-->
+
+  <!--  <div>-->
+  <h2>My routes</h2>
+  <ul class="routes">
+    <li *ngFor="let r of routes">
+      <a routerLink="/detail/{{r.attributes.long_name}}">
+        <span class="badge">{{r.id}}</span> {{r.attributes.long_name}} | {{r.attributes.direction_destinations[0]}} - {{r.attributes.direction_destinations[1]}}
+      </a>
+    </li>
+<!--    {{routes}}-->
+  </ul>
+</div>
+
+<!--</div>-->
+
+
+

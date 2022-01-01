@@ -1,0 +1,7 @@
+<h2>Top Routes</h2>
+<div class="routes-menu">
+  <a *ngFor="let r of routes"
+     routerLink="/detail/{{r.attributes.long_name}}">
+    {{r.attributes.long_name}} |
+  </a>
+</div>

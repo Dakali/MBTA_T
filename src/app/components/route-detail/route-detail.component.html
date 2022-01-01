@@ -1,0 +1,19 @@
+<div *ngIf="route">
+  <h2>{{route.attributes.long_name | uppercase}}Routes Details</h2>
+  <div><span>name: </span>{{route.attributes.long_name}}</div>
+  <div>
+    <label for="route-name">route name: </label>
+    <input id="route-name" [(ngModel)]="route.attributes.long_name" placeholder="name">
+  </div>
+  <div>
+    <label>route direction: </label>
+    <label>{{route.attributes.direction_destinations[0]}} - {{route.attributes.direction_destinations[1]}}</label>
+<!--    <input id="route-direction" [(ngModel)]="route.direction" placeholder="direction">-->
+  </div>
+<!--  <div>-->
+<!--    <label for="route-type">route type: </label>-->
+<!--    <input id="route-type" [(ngModel)]="route.type" placeholder="type">-->
+<!--  </div>-->
+  <button (click)="goBack()">go back</button>
+</div>
+
